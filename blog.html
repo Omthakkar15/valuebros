@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Blog - ValueBros Infotech Services</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <span class="nav-logo">ValueBros Infotech</span>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html" >Home</a>
+        <a href="about.html">About Us</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="blog.html" class="active">Blog</a>
+        <a href="faq.html">FAQ</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span class="bar"></span><span class="bar"></span
+        ><span class="bar"></span>
+      </div>
+    </nav>
+
+    <section
+      style="
+        padding: 4rem 2rem;
+        max-width: 900px;
+        margin: auto;
+        color: var(--secondary);
+      "
+    >
+      <h1 class="section-title" style="color: var(--primary)">
+        Latest Blog Articles
+      </h1>
+
+      <article
+        style="
+          margin-bottom: 2rem;
+          background: var(--card);
+          padding: 1rem;
+          border-radius: 15px;
+          box-shadow: var(--shadow);
+        "
+      >
+        <h2 style="color: var(--primary); margin-top: 0">
+          Top Five Festival Design Trends for 2025
+        </h2>
+        <p>
+          Discover the latest trends in festive branding that help your business
+          stay relevant and engaging throughout the year...
+        </p>
+        <a href="#" style="color: var(--accent); text-decoration: none"
+          >Read More →</a
+        >
+      </article>
+
+      <article
+        style="
+          margin-bottom: 2rem;
+          background: var(--card);
+          padding: 1rem;
+          border-radius: 15px;
+          box-shadow: var(--shadow);
+        "
+      >
+        <h2 style="color: var(--primary); margin-top: 0">
+          Why Seasonal Branding Boosts Sales
+        </h2>
+        <p>
+          Learn how customizing your marketing for festivals can increase
+          customer connection and generate more leads...
+        </p>
+        <a href="#" style="color: var(--accent); text-decoration: none"
+          >Read More →</a
+        >
+      </article>
+    </section>
+
+    <footer class="footer">
+      &copy; 2025 ValueBros Infotech Services. All rights reserved.
+    </footer>
+
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.getElementById("navLinks");
+      hamburger.onclick = () => {
+        navLinks.classList.toggle("active");
+      };
+    </script>
+  </body>
+</html>

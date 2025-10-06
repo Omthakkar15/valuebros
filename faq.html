@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>FAQ - ValueBros Infotech Services</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <span class="nav-logo">ValueBros Infotech</span>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html" >Home</a>
+        <a href="about.html">About Us</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="blog.html">Blog</a>
+        <a href="faq.html" class="active">FAQ</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span class="bar"></span><span class="bar"></span
+        ><span class="bar"></span>
+      </div>
+    </nav>
+
+    <section
+      style="
+        padding: 4rem 2rem;
+        max-width: 800px;
+        margin: auto;
+        color: var(--secondary);
+      "
+    >
+      <h1 class="section-title" style="color: var(--primary)">
+        Frequently Asked Questions
+      </h1>
+
+      <div
+        style="
+          background: var(--card);
+          padding: 1rem 1.5rem;
+          border-radius: 15px;
+          box-shadow: var(--shadow);
+          margin-bottom: 1.5rem;
+        "
+      >
+        <h3>What festivals are covered in your packages?</h3>
+        <p>
+          We cover all major Indian festivals including Diwali, Holi, Eid,
+          Christmas, Navratri, and more, with personalized design celebrations.
+        </p>
+      </div>
+
+      <div
+        style="
+          background: var(--card);
+          padding: 1rem 1.5rem;
+          border-radius: 15px;
+          box-shadow: var(--shadow);
+          margin-bottom: 1.5rem;
+        "
+      >
+        <h3>What support do you offer after purchase?</h3>
+        <p>
+          Premium and Pro packages include weekday design support and revisions.
+          Pro also offers website hosting and free SSH license.
+        </p>
+      </div>
+
+      <div
+        style="
+          background: var(--card);
+          padding: 1rem 1.5rem;
+          border-radius: 15px;
+          box-shadow: var(--shadow);
+          margin-bottom: 1.5rem;
+        "
+      >
+        <h3>Can I customize a package?</h3>
+        <p>
+          Yes, we offer add-ons and custom quotes for advanced requirements.
+          Contact us to discuss your needs.
+        </p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      &copy; 2025 ValueBros Infotech Services. All rights reserved.
+    </footer>
+
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.getElementById("navLinks");
+      hamburger.onclick = () => {
+        navLinks.classList.toggle("active");
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Portfolio - ValueBros Infotech Services</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <span class="nav-logo">ValueBros Infotech</span>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html" >Home</a>
+        <a href="about.html">About Us</a>
+        <a href="portfolio.html" class="active">Portfolio</a>
+        <a href="blog.html">Blog</a>
+        <a href="faq.html">FAQ</a>
+        <a href="testimonials.html" class="active">Testimonials</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span class="bar"></span><span class="bar"></span
+        ><span class="bar"></span>
+      </div>
+    </nav>
+
+    <section
+      style="
+        padding: 4rem 2rem;
+        max-width: 1000px;
+        margin: auto;
+        color: var(--secondary);
+      "
+    >
+      <h1
+        class="section-title"
+        style="color: var(--primary); text-align: center"
+      >
+        Our Portfolio
+      </h1>
+      <p style="text-align: center; max-width: 700px; margin: auto">
+        Browse some of our recent festival branding projects and business
+        websites we've delivered.
+      </p>
+      <div
+        style="
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+          gap: 1.5rem;
+          margin-top: 2rem;
+        "
+      >
+        <div
+          style="
+            background: var(--card);
+            padding: 1rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+          "
+        >
+          <img
+            src="https://via.placeholder.com/280x160?text=Festival+Design+1"
+            alt="Festival Design 1"
+            style="border-radius: 8px; width: 100%"
+          />
+          <h3 style="color: var(--primary); margin-top: 0.8rem">
+            Diwali Business Branding
+          </h3>
+          <p style="font-size: 0.95rem">
+            Custom social media templates and promotional graphics.
+          </p>
+        </div>
+        <div
+          style="
+            background: var(--card);
+            padding: 1rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+          "
+        >
+          <img
+            src="https://via.placeholder.com/280x160?text=Website+Project+1"
+            alt="Business Website 1"
+            style="border-radius: 8px; width: 100%"
+          />
+          <h3 style="color: var(--primary); margin-top: 0.8rem">
+            Small Business Website
+          </h3>
+          <p style="font-size: 0.95rem">
+            Responsive website with integrated booking system.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      &copy; 2025 ValueBros Infotech Services. All rights reserved.
+    </footer>
+
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.getElementById("navLinks");
+      hamburger.onclick = () => {
+        navLinks.classList.toggle("active");
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>ValueBros Infotech Services - Home</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <span class="nav-logo">ValueBros Infotech</span>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="blog.html">Blog</a>
+        <a href="faq.html">FAQ</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span class="bar"></span><span class="bar"></span
+        ><span class="bar"></span>
+      </div>
+    </nav>
+
+    <section class="hero" id="home">
+      <div class="hero-text">
+        <h1 class="hero-title">
+          Stand Out with <br />Festive Business Branding
+        </h1>
+        <p class="hero-desc">
+          Make every moment count! ValueBros Infotech Services provides
+          creative, eye-catching design packages for every Indian festival, plus
+          pro add-ons and web solutions for businesses that want to shine
+          year-round.
+        </p>
+        <a href="pricing.html"
+          ><button class="hero-cta">View Packages</button></a
+        >
+      </div>
+    </section>
+
+    <!-- Add this block just above the <section class="packages-section" id="packages"> in index.html -->
+
+    <section
+      class="why-choose-us"
+      style="
+        background: #181818;
+        padding: 3rem 1rem;
+        color: var(--secondary);
+        text-align: center;
+      "
+    >
+      <h2
+        class="section-title"
+        style="color: var(--primary); margin-bottom: 1.5rem"
+      >
+        Why Choose Us?
+      </h2>
+      <div
+        style="
+          max-width: 900px;
+          margin: auto;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 2rem;
+        "
+      >
+        <div
+          style="
+            flex: 1 1 260px;
+            background: var(--card);
+            border-radius: 16px;
+            padding: 1.7rem 1.3rem;
+            box-shadow: var(--shadow);
+            text-align: center;
+          "
+        >
+          <h3 style="color: var(--primary); margin-bottom: 0.8rem">
+            Festival Expertise
+          </h3>
+          <p>
+            Specialized in designing for all major Indian festivals, ensuring
+            your brand connects with festive spirit perfectly every time.
+          </p>
+        </div>
+        <div
+          style="
+            flex: 1 1 260px;
+            background: var(--card);
+            border-radius: 16px;
+            padding: 1.7rem 1.3rem;
+            box-shadow: var(--shadow);
+            text-align: center;
+          "
+        >
+          <h3 style="color: var(--primary); margin-bottom: 0.8rem">
+            Comprehensive Packages
+          </h3>
+          <p>
+            Multiple flexible packages including personalized designs and
+            website solutions tailored to fit your business needs and budget.
+          </p>
+        </div>
+        <div
+          style="
+            flex: 1 1 260px;
+            background: var(--card);
+            border-radius: 16px;
+            padding: 1.7rem 1.3rem;
+            box-shadow: var(--shadow);
+            text-align: center;
+          "
+        >
+          <h3 style="color: var(--primary); margin-bottom: 0.8rem">
+            Dedicated Support
+          </h3>
+          <p>
+            Reliable weekday support, revisions, and quick responses to keep
+            your marketing always fresh and aligned with business goals.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="packages-section" id="packages">
+      <h2 class="section-title">Choose Your Best Package</h2>
+      <div class="packages-list">
+        <div class="package-card">
+          <div class="package-badge">Standard</div>
+          <div class="package-title">Festival Package</div>
+          <div class="package-price">₹11,999/-</div>
+          <ul class="package-features">
+            <li>Festival personalized business design for a year</li>
+            <li>All Indian festivals included</li>
+            <li>Ready-to-post creatives</li>
+            <li>Email & WhatsApp delivery</li>
+          </ul>
+        </div>
+        <div class="package-card">
+          <div class="package-badge">Premium</div>
+          <div class="package-title">Design Pro+</div>
+          <div class="package-price">₹14,999/-</div>
+          <ul class="package-features">
+            <li>Standard package features</li>
+            <li>Extra 15-20 business designs</li>
+            <li>Weekday design support</li>
+            <li>Customization & faster delivery</li>
+          </ul>
+        </div>
+        <div class="package-card pro">
+          <div class="package-badge">Pro</div>
+          <div class="package-title">Ultimate Business Suite</div>
+          <div class="package-price">₹24,999/-</div>
+          <ul class="package-features">
+            <li>Premium package features</li>
+            <li>Professional website included</li>
+            <li>Free SSH license & hosting</li>
+            <li>Priority account manager</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact" style="padding-bottom: 3rem">
+      <h2 class="section-title">Contact Us</h2>
+      <form class="contact-form" autocomplete="off" onsubmit="return false;">
+        <input type="text" placeholder="Name" required />
+        <input type="email" placeholder="Email" required />
+        <textarea
+          rows="4"
+          placeholder="Enter your message or requirements"
+        ></textarea>
+        <button type="submit" onclick="showMessage()">Send Message</button>
+        <span
+          id="formMsg"
+          style="
+            color: var(--primary);
+            display: none;
+            font-weight: bold;
+            margin-top: 0.4rem;
+          "
+          >Message Sent!</span
+        >
+      </form>
+    </section>
+
+    <footer class="footer">
+      &copy; 2025 ValueBros Infotech Services. All rights reserved.
+    </footer>
+
+    <script>
+      // Hamburger toggle
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.getElementById("navLinks");
+      hamburger.onclick = () => {
+        navLinks.classList.toggle("active");
+      };
+
+      function showMessage() {
+        const msg = document.getElementById("formMsg");
+        msg.style.display = "inline-block";
+        setTimeout(() => {
+          msg.style.display = "none";
+        }, 2500);
+      }
+    </script>
+  </body>
+</html>

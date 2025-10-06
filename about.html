@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>About Us - ValueBros Infotech Services</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <span class="nav-logo">ValueBros Infotech</span>
+      <div class="nav-links" id="navLinks">
+        <div class="nav-links" id="navLinks">
+        <a href="index.html" >Home</a>
+        <a href="about.html" class="active">About Us</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="blog.html">Blog</a>
+        <a href="faq.html">FAQ</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span class="bar"></span><span class="bar"></span
+        ><span class="bar"></span>
+      </div>
+    </nav>
+
+    <section
+      class="about-section"
+      style="
+        padding: 4rem 2rem;
+        max-width: 900px;
+        margin: auto;
+        color: var(--secondary);
+      "
+    >
+      <h1 class="section-title" style="color: var(--primary)">About Us</h1>
+      <p>
+        ValueBros Infotech Services is dedicated to delivering personalized
+        festival branding and business design solutions for a full year. Our
+        mission is to help businesses shine with creative, timely, and impactful
+        designs tailored to every festival.
+      </p>
+      <p>
+        Our passionate team combines industry experience with a love for design
+        to provide premium quality and customer support. We have proudly served
+        over 50+ clients, helping them grow their brand presence across
+        festivals and digital platforms.
+      </p>
+      <p>
+        At ValueBros Infotech Services, we believe in nurturing future talent
+        and supporting the educational community. We actively help college
+        students by providing them with real-world project opportunities and
+        guidance for their academic projects. Our team collaborates closely with
+        students to deliver quality designs and web solutions that enhance their
+        learning experience and portfolio. This commitment reflects our
+        dedication to fostering growth and innovation, empowering the next
+        generation of designers and developers.
+      </p>
+      <h2 style="margin-top: 2.5rem; color: var(--primary)">Our Team</h2>
+      <ul>
+        <li><strong>OM Thakkar</strong> - Lead Designer</li>
+        <li><strong>Shivam Soni</strong> - Web Developer & Support Lead</li>
+        <li><strong>Shivam & Team</strong> -Customer Relations Manager</li>
+      </ul>
+    </section>
+
+    <footer class="footer">
+      &copy; 2025 ValueBros Infotech Services. All rights reserved.
+    </footer>
+
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.getElementById("navLinks");
+      hamburger.onclick = () => {
+        navLinks.classList.toggle("active");
+      };
+    </script>
+  </body>
+</html>

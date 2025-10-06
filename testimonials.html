@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Testimonials - ValueBros Infotech Services</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <span class="nav-logo">ValueBros Infotech</span>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <div class="nav-links" id="navLinks">
+        <a href="index.html" >Home</a>
+        <a href="about.html">About Us</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="blog.html">Blog</a>
+        <a href="faq.html">FAQ</a>
+        <a href="testimonials.html" class="active">Testimonials</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span class="bar"></span><span class="bar"></span
+        ><span class="bar"></span>
+      </div>
+    </nav>
+
+    <section
+      style="
+        padding: 4rem 2rem;
+        max-width: 800px;
+        margin: auto;
+        color: var(--secondary);
+      "
+    >
+      <h1 class="section-title" style="color: var(--primary)">
+        What Our Clients Say
+      </h1>
+
+      <blockquote
+        style="
+          background: var(--card);
+          padding: 1.2rem 1.6rem;
+          border-radius: 15px;
+          box-shadow: var(--shadow);
+          font-style: italic;
+        "
+      >
+        "ValueBros transformed our festival marketing! Their designs perfectly
+        captured the spirit of Diwali and boosted our engagement tremendously."
+        <br /><br />
+        <strong>- Priya Mehta, Retail Store Owner</strong>
+      </blockquote>
+
+      <blockquote
+        style="
+          background: var(--card);
+          padding: 1.2rem 1.6rem;
+          border-radius: 15px;
+          box-shadow: var(--shadow);
+          font-style: italic;
+          margin-top: 1rem;
+        "
+      >
+        "The Pro Package made launching our business website so easy! Plus the
+        hosting and support have been excellent."
+        <br /><br />
+        <strong>- Raj Verma, Entrepreneur</strong>
+        <br />
+        <strong>- Delhi, India</strong>
+      </blockquote>
+    </section>
+
+    <footer class="footer">
+      &copy; 2025 ValueBros Infotech Services. All rights reserved.
+    </footer>
+
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.getElementById("navLinks");
+      hamburger.onclick = () => {
+        navLinks.classList.toggle("active");
+      };
+    </script>
+  </body>
+</html>

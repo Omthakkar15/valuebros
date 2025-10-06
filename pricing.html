@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Pricing - ValueBros Infotech Services</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <span class="nav-logo">ValueBros Infotech</span>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html" >Home</a>
+        <a href="about.html">About Us</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="blog.html">Blog</a>
+        <a href="faq.html">FAQ</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="pricing.html" class="active">Pricing</a>
+        <a href="contact.html">Contact</a>
+      <div class="hamburger" id="hamburger">
+        <span class="bar"></span><span class="bar"></span
+        ><span class="bar"></span>
+      </div>
+    </nav>
+
+    <section class="packages-section" style="padding: 4rem 1rem">
+      <h1 class="section-title">Pricing Details</h1>
+      <p
+        style="
+          max-width: 700px;
+          margin: 0 auto 2rem;
+          color: var(--secondary);
+          text-align: center;
+        "
+      >
+        Choose the package best suited to your needs. Contact us for custom
+        quotes or add-ons.
+      </p>
+      <div class="packages-list" style="justify-content: center">
+        <div class="package-card">
+          <div class="package-badge">Standard</div>
+          <div class="package-title">Festival Package</div>
+          <div class="package-price">₹11,999/-</div>
+          <ul class="package-features">
+            <li>Festival personalized business design for a year</li>
+            <li>All major festivals covered</li>
+            <li>Ready-to-post creatives</li>
+            <li>Email & WhatsApp delivery</li>
+          </ul>
+        </div>
+        <div class="package-card">
+          <div class="package-badge">Premium</div>
+          <div class="package-title">Design Pro+</div>
+          <div class="package-price">₹14,999/-</div>
+          <ul class="package-features">
+            <li>All Standard features</li>
+            <li>Extra 15-20 business requirement designs</li>
+            <li>Weekday design support & revisions</li>
+            <li>Faster delivery & customization</li>
+          </ul>
+        </div>
+        <div class="package-card pro">
+          <div class="package-badge">Pro</div>
+          <div class="package-title">Ultimate Business Suite</div>
+          <div class="package-price">₹24,999/-</div>
+          <ul class="package-features">
+            <li>Festival Package features</li>
+            <li>Professional website included</li>
+            <li>Free SSH license & hosting</li>
+            <li>Priority account manager and support</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      &copy; 2025 ValueBros Infotech Services. All rights reserved.
+    </footer>
+
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.getElementById("navLinks");
+      hamburger.onclick = () => {
+        navLinks.classList.toggle("active");
+      };
+    </script>
+  </body>
+</html>
