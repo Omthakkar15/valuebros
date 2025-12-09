@@ -1,5 +1,363 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact — ValueBros Infotech</title>
+
+    <!-- Google Font + Bootstrap (match index.html) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <link rel="icon" href="logopng.jpeg" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <style>
+      /* keep same base styles as index.html but targeted for contact page */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+        background: #ffffff;
+        color: #1a1a1a;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: #ffffff;
+        padding: 15px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #eee;
+        z-index: 100;
+      }
+      header .logo img {
+        height: 50px;
+      }
+      nav a {
+        margin-left: 25px;
+        text-decoration: none;
+        color: #1a1a1a;
+        font-weight: 500;
+      }
+      nav a:hover {
+        color: #9e1a99;
+      }
+
+      .page-container {
+        max-width: 1150px;
+        margin: 0 auto;
+        padding: 120px 20px 40px; /* top padding to account for fixed header */
+      }
+
+      h1, h2 {
+        font-weight: 700;
+        color: #4b1e8a;
+      }
+
+      /* Contact area */
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 380px 1fr;
+        gap: 30px;
+        align-items: start;
+      }
+
+      .card-light {
+        background: #fafafa;
+        border: 1px solid #eee;
+        border-radius: 14px;
+        padding: 26px;
+        box-shadow: 0 6px 24px rgba(0,0,0,0.03);
+      }
+
+      .contact-title {
+        color: #9e1a99;
+        font-weight: 800;
+        font-size: 1.4rem;
+        margin-bottom: 12px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 6px;
+        font-weight: 600;
+        color: #333;
+      }
+
+      .input, input[type="text"], input[type="email"], input[type="tel"], textarea {
+        width: 100%;
+        padding: 10px 12px;
+        border: 1px solid #e6e6e6;
+        border-radius: 8px;
+        outline: none;
+        font-size: 0.95rem;
+        background: #fff;
+        color: #111;
+        transition: border-color .15s, box-shadow .15s;
+      }
+
+      .input:focus, input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, textarea:focus {
+        border-color: #9e1a99;
+        box-shadow: 0 0 0 3px rgba(158,26,153,0.06);
+      }
+
+      textarea {
+        min-height: 120px;
+        resize: vertical;
+      }
+
+      .btn-primary-custom {
+        display: inline-block;
+        padding: 12px 26px;
+        background: linear-gradient(90deg,#9e1a99,#4b1e8a 100%);
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: transform .08s ease, box-shadow .12s ease;
+      }
+      .btn-primary-custom:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 30px rgba(75,30,138,0.12);
+        text-decoration: none;
+        color: #fff;
+      }
+
+      .helper-msg {
+        margin-top: 12px;
+        font-weight: 600;
+      }
+      .success { color: #2a9d63; }
+      .error { color: #d9534f; }
+
+      .team-list {
+        list-style: none;
+        padding: 0;
+        margin: 8px 0 0 0;
+      }
+      .team-list li {
+        margin-bottom: 10px;
+        color: #333;
+      }
+      .team-name {
+        color: #4b1e8a;
+        font-weight: 700;
+        margin-right: 8px;
+      }
+
+      footer {
+        text-align: center;
+        padding: 20px;
+        font-size: 0.9rem;
+        border-top: 1px solid #eee;
+        color: #666;
+        margin-top: 44px;
+      }
+
+      @media (max-width: 980px) {
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+        .page-container {
+          padding-top: 100px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- HEADER (same as index.html) -->
+    <header>
+      <div class="logo">
+        <a href="index.html"><img src="fulllogo.png" alt="ValueBros Logo" /></a>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <div class="page-container">
+      <div style="text-align:center; margin-bottom:18px;">
+        <h2>Let’s build your business foundation</h2>
+        <p style="color:#555; max-width:720px; margin:8px auto 0;">
+          Reach out — we handle websites, branding, registrations and more. Use the form or contact our team directly.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Left: Contact form card -->
+        <div class="card-light">
+          <div class="contact-title">Contact Us</div>
+
+          <form id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="username">Your Name</label>
+              <input
+                class="input"
+                type="text"
+                id="username"
+                name="username"
+                required
+                autocomplete="name"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="user_email">Your Email</label>
+              <input
+                class="input"
+                type="email"
+                id="user_email"
+                name="user_email"
+                required
+                autocomplete="email"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="user_phone">Phone Number</label>
+              <input
+                class="input"
+                type="tel"
+                id="user_phone"
+                name="user_phone"
+                required
+                pattern=".{8,}"
+                autocomplete="tel"
+                placeholder="e.g. +91 9876543210"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea
+                class="input"
+                id="message"
+                name="message"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary-custom">Send Message</button>
+            <div id="msg" class="helper-msg" aria-live="polite"></div>
+          </form>
+        </div>
+
+        <!-- Right: Team / Info card -->
+        <div class="card-light">
+          <div class="contact-title">Our Team</div>
+          <p style="color:#555; margin-bottom:8px;">Reach any of our team members directly:</p>
+          <ul class="team-list">
+            <li><span class="team-name">Om Thakkar</span> <span>+91 99785 37181</span></li>
+            <li><span class="team-name">Shivam Soni</span> <span>+91 87359 19377</span></li>
+            <li><span class="team-name">Prince Kansagara</span> <span>+91 63590 94043</span></li>
+          </ul>
+
+          <div style="margin-top:16px; color:#555;">
+            <strong style="color:#4b1e8a;">Email:</strong> valuebrosinfotech@gmail.com<br />
+            <strong style="color:#4b1e8a;">Phone:</strong> +91 99785 37181
+          </div>
+
+          <div style="margin-top:18px; color:#4b1e8a; font-weight:700;">We build things you'll love.</div>
+        </div>
+      </div>
+
+      <footer>© 2025 ValueBros Infotech. All rights reserved.</footer>
+    </div>
+
+    <!-- JS (Bootstrap dependencies + EmailJS init + form handler) -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      // EmailJS config (kept your Service/Template/Public keys)
+      window.onload = function () {
+        const SERVICE_ID = "service_rudulch";
+        const TEMPLATE_ID = "template_zyy5egf";
+        const PUBLIC_KEY = "gyDYhK6NORV-hcKxm";
+
+        if (typeof emailjs !== "undefined" && emailjs.init) {
+          emailjs.init(PUBLIC_KEY);
+        } else {
+          console.warn("EmailJS library not loaded.");
+        }
+
+        const form = document.getElementById("contact-form");
+        const msgEl = document.getElementById("msg");
+
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          msgEl.textContent = "";
+          msgEl.className = "helper-msg";
+
+          // Simple client-side validation
+          if (!form.checkValidity()) {
+            msgEl.textContent = "Please fill all required fields correctly.";
+            msgEl.classList.add("error");
+            return;
+          }
+
+          // Send using EmailJS
+          emailjs
+            .sendForm(SERVICE_ID, TEMPLATE_ID, this)
+            .then(
+              function () {
+                msgEl.textContent = "Message sent successfully!";
+                msgEl.classList.remove("error");
+                msgEl.classList.add("success");
+                form.reset();
+              },
+              function (error) {
+                msgEl.textContent = "Failed to send message. Try again later.";
+                msgEl.classList.remove("success");
+                msgEl.classList.add("error");
+                console.error("EmailJS error:", error);
+              }
+            );
+        });
+      };
+    </script>
+  </body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Contact Form</title>
@@ -268,3 +626,4 @@
 </body>
 </html>
 
+ -->
