@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f766e"/>
+      <stop offset="100%" style="stop-color:#14b8a6"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#g2)" opacity="0.95"/>
+  <rect x="80" y="80" width="440" height="180" rx="8" fill="rgba(0,0,0,0.2)"/>
+  <text x="100" y="110" fill="rgba(255,255,255,0.9)" font-family="monospace" font-size="14">const data = await fetch('/api');</text>
+  <text x="100" y="135" fill="rgba(255,255,255,0.7)" font-family="monospace" font-size="14">// Development &amp; analytics</text>
+  <rect x="100" y="150" width="60" height="8" rx="2" fill="rgba(255,255,255,0.4)"/>
+  <rect x="170" y="150" width="80" height="8" rx="2" fill="rgba(255,255,255,0.3)"/>
+  <rect x="260" y="150" width="120" height="8" rx="2" fill="rgba(255,255,255,0.35)"/>
+  <text x="300" y="300" text-anchor="middle" fill="rgba(255,255,255,0.9)" font-family="system-ui,sans-serif" font-size="20" font-weight="600">Development &amp; data</text>
+</svg>
