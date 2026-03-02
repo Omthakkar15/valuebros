@@ -68,8 +68,9 @@
         "url": "https://www.valuebrosinfo.tech",
         "logo": "https://www.valuebrosinfo.tech/assets/logo.png",
         "description": "Best website development and AI automation company in India and Gujarat. Video editing, web development, AI solutions.",
-        "email": "hello@valuebrosinfo.tech",
+        "email": "valuebrosinfotech@gmail.com",
         "telephone": "+919876543210",
+        "telephone": "+919978537181",
         "address": {
           "@type": "PostalAddress",
           "addressRegion": "Gujarat",
@@ -107,7 +108,8 @@
         "image": "https://www.valuebrosinfo.tech/assets/logo.png",
         "url": "https://www.valuebrosinfo.tech",
         "telephone": "+919876543210",
-        "email": "hello@valuebrosinfo.tech",
+        "telephone": "+919978537181",
+        "email": "valuebrosinfotech@gmail.com",
         "address": {
           "@type": "PostalAddress",
           "addressRegion": "Gujarat",
@@ -776,56 +778,103 @@
                 within 24 hours.
               </p>
               <div class="contact-info animate-on-scroll">
-                <a href="mailto:hello@valuebrosinfo.tech" class="contact-link"
-                  >hello@valuebrosinfo.tech</a
+                <a href="mailto:valuebrosinfotech@gmail.com" class="contact-link"
+                  >valuebrosinfotech@gmail.com</a
                 >
                 <a href="tel:+918735919377" class="contact-link"
                   >+91 8735919377</a
                 >
+                <a href="tel:+918735919377" class="contact-link"
+                  >+91 978537181</a
+                >
               </div>
             </div>
+            <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const SERVICE_ID = "service_rudulch";
+  const TEMPLATE_ID = "template_zyy5egf";
+  const PUBLIC_KEY = "gyDYhK6NORV-hcKxm";
+
+  emailjs.init(PUBLIC_KEY);
+
+  const form = document.getElementById("contact-form");
+  const errorEl = document.querySelector(".form-error");
+  const successEl = document.querySelector(".form-success");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    errorEl.textContent = "";
+    successEl.textContent = "";
+
+    if (!form.checkValidity()) {
+      errorEl.textContent = "Please fill all fields correctly.";
+      return;
+    }
+
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form)
+      .then(function () {
+        successEl.textContent =
+          "Message sent successfully! We’ll contact you soon.";
+        form.reset();
+      })
+      .catch(function (error) {
+        console.error("EmailJS Error:", error);
+        errorEl.textContent =
+          "Something went wrong. Please try again later.";
+      });
+  });
+
+});
+</script>
             <!-- Replace action="#" with your Formspree URL (https://formspree.io/f/YOUR_ID) to receive submissions. -->
-            <form
-              class="contact-form animate-on-scroll"
-              action="#"
-              method="post"
-            >
-              <div class="form-group">
-                <label for="name">Name</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="Your name"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="you@company.com"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <label for="message">Message</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="4"
-                  placeholder="Tell us about your project..."
-                  required
-                ></textarea>
-              </div>
-              <p class="form-error" aria-live="polite"></p>
-              <p class="form-success" aria-live="polite"></p>
-              <button type="submit" class="btn btn-primary btn-full">
-                Send Message
-              </button>
-            </form>
+<form
+  id="contact-form"
+  class="contact-form animate-on-scroll"
+>
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input
+      type="text"
+      id="name"
+      name="name"
+      placeholder="Your name"
+      required
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      placeholder="you@company.com"
+      required
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="message">Message</label>
+    <textarea
+      id="message"
+      name="message"
+      rows="4"
+      placeholder="Tell us about your project..."
+      required
+    ></textarea>
+  </div>
+
+  <p class="form-error" aria-live="polite" style="color:#ff4d4f;"></p>
+  <p class="form-success" aria-live="polite" style="color:#00c853;"></p>
+
+  <button type="submit" class="btn btn-primary btn-full">
+    Send Message
+  </button>
+</form>
           </div>
         </div>
       </section>
@@ -899,5 +948,6 @@
     <script src="script.js" defer></script>
   </body>
 </html>
+
 
 
