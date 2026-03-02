@@ -663,6 +663,7 @@ section {
   mask-composite: exclude;
   opacity: 0;
   transition: opacity var(--transition);
+  pointer-events: none;
 }
 .service-card:hover {
   transform: translateY(-8px);
@@ -729,6 +730,8 @@ section {
   transition:
     gap var(--transition),
     color var(--transition);
+  position: relative;
+  z-index: 1;
 }
 .service-card:hover .card-link {
   gap: 12px;
@@ -1004,13 +1007,16 @@ section {
 
 /* ---- Contact page ---- */
 .contact-page {
-  padding-top: 60px;
+  padding: 100px 0;
 }
 .contact-heading {
   font-family: var(--font-head);
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   font-weight: 700;
   margin-bottom: 12px;
+}
+.contact-content .contact-desc {
+  margin-bottom: 24px;
 }
 
 /* ---- About / Team ---- */
@@ -1132,7 +1138,7 @@ section {
 .contact-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 64px;
+  gap: 48px;
   align-items: start;
   max-width: 1000px;
   margin: 0 auto;
@@ -1517,12 +1523,67 @@ section {
     font-size: 1.5rem;
   }
 
+  /* Hero: smaller title on tablet/phone */
+  .hero-title {
+    font-size: clamp(1.75rem, 6vw, 3rem);
+  }
+  .hero {
+    padding: 80px 20px 60px;
+  }
+  .hero-desc {
+    font-size: 1rem;
+  }
+
   .contact-wrapper {
     grid-template-columns: 1fr;
   }
 
   .cursor-glow {
     display: none;
+  }
+}
+
+/* ---- Small phones (hero title smaller) ---- */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: clamp(1.35rem, 5vw, 2rem);
+    margin-bottom: 16px;
+  }
+  .hero {
+    padding: 72px 16px 48px;
+  }
+  .hero-badge {
+    font-size: 0.75rem;
+    padding: 6px 14px;
+    margin-bottom: 16px;
+  }
+  .hero-desc {
+    font-size: 0.9rem;
+    margin-bottom: 24px;
+  }
+  .hero-cta {
+    flex-direction: column;
+    margin-bottom: 48px;
+  }
+  .hero-cta .btn {
+    width: 100%;
+  }
+  .hero-stats {
+    gap: 24px;
+  }
+  .stat-num,
+  .stat-suffix {
+    font-size: 1.35rem;
+  }
+  .section-title {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+  .section-badge {
+    font-size: 0.75rem;
+  }
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
 
